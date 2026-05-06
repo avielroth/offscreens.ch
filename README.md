@@ -9,13 +9,15 @@ npm install
 npm run dev
 ```
 
+The dev server uses Vite with Tailwind 4, so changes to `index.html`, `src/styles.css`, and `src/main.js` refresh automatically.
+
 ## Build
 
 ```bash
 npm run build
 ```
 
-Der Build erzeugt `assets/styles.css`. Tailwind 4 läuft über `@tailwindcss/cli`. Die Seite ist so aufgebaut, dass sie direkt über GitHub Pages aus dem Repository-Root veröffentlicht werden kann.
+Der Build erzeugt `assets/styles.css`. Tailwind 4 läuft im Dev-Server über `@tailwindcss/vite` und für den statischen GitHub-Pages-Build über `@tailwindcss/cli`. Die Seite ist so aufgebaut, dass sie direkt über GitHub Pages aus dem Repository-Root veröffentlicht werden kann.
 
 ## Kontaktformular
 

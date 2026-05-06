@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npm run build:css && vite --host 0.0.0.0",
+    "dev": "vite --host 0.0.0.0",
     "build": "npm run build:css",
     "build:css": "tailwindcss -i ./src/styles.css -o ./assets/styles.css --minify",
     "watch:css": "tailwindcss -i ./src/styles.css -o ./assets/styles.css --watch"
@@ -12,6 +12,7 @@
   "devDependencies": {
     "@tailwindcss/cli": "4.2.4",
     "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "4.2.4",
     "tailwindcss": "4.2.4",
     "vite": "8.0.10"
   }

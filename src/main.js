@@ -1,3 +1,7 @@
+if (import.meta.env?.DEV) {
+  await import("./styles.css");
+}
+
 const materialPriceInput = document.querySelector("#materialPrice");
 const gramsInput = document.querySelector("#grams");
 const hoursInput = document.querySelector("#hours");
