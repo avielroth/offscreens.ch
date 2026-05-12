@@ -7,11 +7,10 @@
     <title>Custom 3D-Prints</title>
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
-  <body>
+  <body id="top">
     <header class="sticky top-0 z-50 border-b-8 border-ink bg-paper/95 backdrop-blur">
       <nav class="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3" aria-label="Hauptnavigation">
-        <a class="nav-link" href="#home">Home</a>
-        <a class="nav-link" href="#pricing">Pricing</a>
+        <a class="nav-link" href="#top">Home</a>
         <a class="nav-link" href="#contact">Contact Me</a>
       </nav>
     </header>
@@ -22,7 +21,7 @@
           <div class="max-w-3xl">
             <p class="label mb-4">Bambu Lab A1 Mini · Fusion 360 · Schweiz</p>
             <h1 class="font-display text-6xl font-bold leading-[0.92] md:text-8xl">
-              Custom 3D-Prints Now 50% off
+              Custom 3D-Prints For you.
 
             </h1>
             <p class="mt-6 max-w-2xl text-lg leading-8 md:text-xl">
@@ -30,7 +29,6 @@
             </p>
             <div class="mt-8 flex flex-wrap gap-4">
               <a class="button-primary" href="#contact">Projekt anfragen</a>
-              <a class="button-secondary" href="#pricing">Preis berechnen</a>
             </div>
           </div>
         </div>
@@ -64,69 +62,6 @@
           <div>
             <strong class="block text-3xl">AMS-Fonds</strong>
             <span class="text-paper/70">für den nächsten Ausbau</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="pricing" class="mx-auto max-w-7xl px-4 py-14">
-        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p class="label mb-4">Pricing</p>
-            <h2 class="font-display text-6xl font-bold leading-none md:text-7xl">Faire Preise, die dein Business tragen.</h2>
-            <p class="mt-6 text-lg leading-8">
-              Der Preis deckt Material, Fehldruck-Risiko, Strom, Drucker-Abnutzung, einen kleinen Gewinn für dich und Rücklagen für Betrieb und später ein AMS-System.
-            </p>
-            <div class="mt-8 grid gap-4 sm:grid-cols-2">
-              <div class="section-frame p-5">
-                <h3 class="text-xl font-extrabold">Einfacher Druck</h3>
-                <p class="mt-2 text-3xl font-black">ab 8 CHF</p>
-                <p class="mt-2 text-sm leading-6">Kleine Teile ohne Designarbeit.</p>
-              </div>
-              <div class="section-frame p-5">
-                <h3 class="text-xl font-extrabold">Custom Design</h3>
-                <p class="mt-2 text-3xl font-black">+ 5-25 CHF</p>
-                <p class="mt-2 text-sm leading-6">Fusion-360-Konstruktion je nach Aufwand.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="section-frame p-5 md:p-7">
-            <div class="flex flex-wrap items-end justify-between gap-4 border-b-4 border-ink pb-5">
-              <div>
-                <h3 class="font-display text-5xl font-semibold">Preisrechner</h3>
-                <p class="mt-1 text-sm font-semibold uppercase tracking-[0.16em] text-ink/60">Richtpreis, nicht final</p>
-              </div>
-              <output id="calculatorOutput" class="font-display text-5xl font-bold">CHF 0</output>
-            </div>
-
-            <div class="mt-6 grid gap-5 md:grid-cols-2">
-              <label>
-                <span class="label mb-2 block">Materialpreis pro kg</span>
-                <input id="materialPrice" class="field" type="number" value="25" min="1" step="0.5" />
-              </label>
-              <label>
-                <span class="label mb-2 block">Gramm Material</span>
-                <input id="grams" class="field" type="number" value="35" min="1" step="1" />
-              </label>
-              <label>
-                <span class="label mb-2 block">Druckzeit in Stunden</span>
-                <input id="hours" class="field" type="number" value="3" min="0.2" step="0.1" />
-              </label>
-              <label>
-                <span class="label mb-2 block">Design-Aufwand CHF</span>
-                <input id="design" class="field" type="number" value="8" min="0" step="1" />
-              </label>
-              <label class="md:col-span-2">
-                <span class="label mb-2 block">Komplexität</span>
-                <select id="complexity" class="field">
-                  <option value="1">Einfach</option>
-                  <option value="1.25" selected>Normal</option>
-                  <option value="1.55">Schwierig / viele Details</option>
-                </select>
-              </label>
-            </div>
-
-            <ul id="breakdownOutput" class="mt-6 grid gap-2 text-sm"></ul>
           </div>
         </div>
       </section>
@@ -212,10 +147,29 @@
       </section>
     </main>
 
-    <footer class="border-t-8 border-ink bg-ink px-4 py-8 text-paper">
-      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4">
-        <p class="font-display text-3xl font-semibold">Custom 3D-Prints</p>
-        <p class="text-sm text-paper/70">Static Website · bereit für GitHub Pages</p>
+    <footer class="border-t-8 border-ink bg-ink px-4 py-10 text-paper">
+      <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_1.4fr]">
+        <div>
+          <p class="font-display text-5xl font-semibold leading-none">Custom 3D-Prints</p>
+          <p class="mt-4 max-w-md text-sm leading-6 text-paper/70">
+            Kleine Teile, saubere Layer, klare Absprachen. Gedruckt in der Schweiz auf dem Bambu Lab A1 Mini.
+          </p>
+        </div>
+
+        <div class="grid gap-3 sm:grid-cols-3">
+          <div class="footer-tile bg-footer-red">
+            <span class="label text-ink/70">Design</span>
+            <strong>Fusion 360</strong>
+          </div>
+          <div class="footer-tile bg-footer-yellow">
+            <span class="label text-ink/70">Material</span>
+            <strong>PLA & PETG</strong>
+          </div>
+          <div class="footer-tile bg-footer-blue">
+            <span class="label text-ink/70">Kontakt</span>
+            <strong>aviel@yolu.ch</strong>
+          </div>
+        </div>
       </div>
     </footer>
 
