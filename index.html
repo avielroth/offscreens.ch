@@ -10,12 +10,21 @@
   <body id="top">
     <header class="sticky top-0 z-50 border-b-8 border-ink bg-paper/95 backdrop-blur">
       <nav class="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-4 py-3" aria-label="Hauptnavigation">
-        <a class="nav-link" href="#top">Home</a>
+        <a class="logo-home-link" href="#top" aria-label="Zur Startseite">
+          <img class="logo-home-mark" src="./assets/logo-mark.png" alt="Off Screen Logo" />
+        </a>
+        <a class="nav-link" href="#about">Warum ich das mache</a>
         <a class="nav-link" href="#contact">Contact Me</a>
       </nav>
     </header>
 
     <main id="home">
+      <section class="mx-auto max-w-7xl px-4 pt-8">
+        <a class="brand-wordmark-panel" href="#top" aria-label="Off Screen Startseite">
+          <img class="brand-wordmark" src="./assets/logo-wordmark.png" alt="Off Screen" />
+        </a>
+      </section>
+
       <section class="mx-auto grid max-w-7xl gap-8 px-4 py-10 lg:grid-cols-[1fr_320px] lg:py-16">
         <div class="section-frame p-6 md:p-10">
           <div class="max-w-3xl">
@@ -45,23 +54,32 @@
         </aside>
       </section>
 
-      <section class="border-y-8 border-ink bg-ink text-paper">
-        <div class="mx-auto grid max-w-7xl gap-6 px-4 py-8 md:grid-cols-4">
+      <section id="about" class="mx-auto max-w-7xl px-4 py-14">
+        <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <strong class="block text-3xl">209 CHF</strong>
-            <span class="text-paper/70">Drucker amortisieren</span>
+            <p class="label mb-3">About Me</p>
+            <h2 class="font-display text-6xl font-bold leading-none md:text-7xl">Warum ich das mache</h2>
           </div>
-          <div>
-            <strong class="block text-3xl">A1 Mini</strong>
-            <span class="text-paper/70">saubere kleine Drucke</span>
-          </div>
-          <div>
-            <strong class="block text-3xl">PLA/PETG</strong>
-            <span class="text-paper/70">Material nach Projekt</span>
-          </div>
-          <div>
-            <strong class="block text-3xl">AMS-Fonds</strong>
-            <span class="text-paper/70">für den nächsten Ausbau</span>
+
+          <div class="section-frame p-6 md:p-10">
+            <img class="brand-mark-stamp mb-8" src="./assets/logo-mark.png" alt="" aria-hidden="true" />
+            <div class="space-y-7 text-lg leading-8 md:text-xl">
+              <p>
+                Seit neuestem habe ich einen 3D-Drucker, den Yolu mir für Projekte gekauft hat.
+                Um diesen Drucker zu amortisieren und das Filament zu bezahlen, dachten wir:
+                Ein kleiner 3D-Druck-Service wäre cool.
+              </p>
+              <p>
+                Ich lerne dabei, wie man Ideen sauber plant, Teile in Fusion 360 konstruiert
+                und Drucke so vorbereitet, dass sie praktisch und schön werden. Besonders spannend
+                finde ich kleine Lösungen, die im Alltag wirklich helfen.
+              </p>
+              <p>
+                Wenn du eine Idee, eine Skizze oder ein kaputtes Teil hast, kannst du mir schreiben.
+                Ich schaue dann, ob es mit meinem Drucker machbar ist, welches Material sinnvoll wäre
+                und wie aufwendig das Design ungefähr wird.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -209,6 +227,9 @@
     <footer class="border-t-8 border-ink bg-ink px-4 py-10 text-paper">
       <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.1fr_1.4fr]">
         <div>
+          <a class="footer-wordmark-panel" href="#top" aria-label="Off Screen Startseite">
+            <img src="./assets/logo-wordmark.png" alt="Off Screen" />
+          </a>
           <p class="font-display text-5xl font-semibold leading-none">Custom 3D-Prints</p>
           <p class="mt-4 max-w-md text-sm leading-6 text-paper/70">
             Kleine Teile, saubere Layer, klare Absprachen. Gedruckt in der Schweiz auf dem Bambu Lab A1 Mini.
@@ -226,7 +247,10 @@
           </div>
           <div class="footer-tile bg-footer-blue">
             <span class="label text-ink/70">Kontakt</span>
-            <strong>aviel@yolu.ch</strong>
+            <div>
+              <strong>E-Mail</strong>
+              <a class="footer-email" href="mailto:aviel@yolu.ch">aviel@yolu.ch</a>
+            </div>
           </div>
         </div>
       </div>
