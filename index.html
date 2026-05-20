@@ -182,7 +182,13 @@
               Schreib kurz, was du brauchst, welche Masse wichtig sind und ob du schon eine Datei hast. Für Custom-Designs kann ich dir auch ein Modell in Fusion 360 erstellen.
             </p>
 
-            <form id="contactForm" class="mx-auto mt-8 grid max-w-2xl gap-4 text-left">
+            <form
+              id="contactForm"
+              class="mx-auto mt-8 grid max-w-2xl gap-4 text-left"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="Neue 3D-Druck Anfrage" />
               <label>
                 <span class="label mb-2 block">Name</span>
                 <input class="field" name="name" autocomplete="name" required />
@@ -199,7 +205,8 @@
                 <span class="label mb-2 block">Details</span>
                 <textarea class="field min-h-32" name="message" placeholder="Masse, Farbe, Material, Stückzahl, Deadline"></textarea>
               </label>
-              <button class="button-primary" type="submit">E-Mail vorbereiten</button>
+              <button class="button-primary" type="submit">Anfrage senden</button>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
             </form>
             <div class="mx-auto mt-10 h-1 max-w-xl bg-ink"></div>
           </div>

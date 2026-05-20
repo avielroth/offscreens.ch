@@ -152,6 +152,21 @@
     box-shadow: 4px 4px 0 var(--color-ink);
   }
 
+  .form-status {
+    min-height: 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 900;
+    line-height: 1.45;
+  }
+
+  .form-status[data-type="success"] {
+    color: #146b35;
+  }
+
+  .form-status[data-type="error"] {
+    color: #a32020;
+  }
+
   .label {
     font-size: 0.875rem;
     font-weight: 900;
