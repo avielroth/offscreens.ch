@@ -185,9 +185,16 @@
             <form
               id="contactForm"
               class="mx-auto mt-8 grid max-w-2xl gap-4 text-left"
-              action="https://formspree.io/f/YOUR_FORM_ID"
+              name="contact"
+              action="/"
               method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
             >
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden">
+                <label>Do not fill this out: <input name="bot-field" /></label>
+              </p>
               <input type="hidden" name="_subject" value="Neue 3D-Druck Anfrage" />
               <label>
                 <span class="label mb-2 block">Name</span>

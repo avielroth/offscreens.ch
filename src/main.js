@@ -11,12 +11,6 @@ function setFormStatus(message, type = "info") {
 
 contactForm?.addEventListener("submit", (event) => {
   event.preventDefault();
-  const endpoint = contactForm.action;
-
-  if (!endpoint || endpoint.includes("YOUR_FORM_ID")) {
-    setFormStatus("Bitte zuerst den Formspree-Endpunkt in index.html eintragen.", "error");
-    return;
-  }
 
   const data = new FormData(contactForm);
   const submitButton = contactForm.querySelector("button[type='submit']");
@@ -24,11 +18,11 @@ contactForm?.addEventListener("submit", (event) => {
   setFormStatus("Wird gesendet ...");
   submitButton.disabled = true;
 
-  fetch(endpoint, {
+  fetch(contactForm.action || "/", {
     method: "POST",
-    body: data,
+    body: new URLSearchParams(data).toString(),
     headers: {
-      Accept: "application/json"
+      "Content-Type": "application/x-www-form-urlencoded"
     }
   })
     .then((response) => {

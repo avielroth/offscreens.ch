@@ -33,4 +33,4 @@ Netlify kann das Projekt dadurch direkt aus dem Repository bauen und `dist` ver�
 
 ## Kontaktformular
 
-Das Formular öffnet aktuell eine vorbereitete E-Mail an `aviel@yolu.ch`. Später kann hier ein Formular-Dienst oder ein kleiner Server für Formular-Handling angebunden werden.
+Das Kontaktformular ist für Netlify Forms vorbereitet. Nach dem Deployment erkennt Netlify das Formular `contact` automatisch und zeigt eingegangene Anfragen im Netlify-Dashboard unter **Forms** an.
