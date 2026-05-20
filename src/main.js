@@ -18,7 +18,7 @@ contactForm?.addEventListener("submit", (event) => {
   setFormStatus("Wird gesendet ...");
   submitButton.disabled = true;
 
-  fetch(contactForm.action || "/", {
+  fetch("/", {
     method: "POST",
     body: new URLSearchParams(data).toString(),
     headers: {
