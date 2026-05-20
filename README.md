@@ -1,6 +1,6 @@
 # Custom 3D-Prints Website
 
-Statische Website für ein kleines 3D-Druck-Business mit HTML, Tailwind CSS 4 und plain JavaScript.
+Statische Website für ein kleines 3D-Druck-Business mit Vite, Tailwind CSS 4 und plain JavaScript.
 
 ## Starten
 
@@ -17,7 +17,19 @@ The dev server uses Vite with Tailwind 4, so changes to `index.html`, `src/style
 npm run build
 ```
 
-Der Build erzeugt `assets/styles.css`. Tailwind 4 läuft im Dev-Server über `@tailwindcss/vite` und für den statischen GitHub-Pages-Build über `@tailwindcss/cli`. Die Seite ist so aufgebaut, dass sie direkt über GitHub Pages aus dem Repository-Root veröffentlicht werden kann.
+Der Build erzeugt ein sauberes `dist`-Verzeichnis für Netlify. Vite verarbeitet JavaScript, Tailwind CSS und die statischen Assets aus `public`.
+
+## Netlify
+
+Die Einstellungen stehen in `netlify.toml`:
+
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist"
+```
+
+Netlify kann das Projekt dadurch direkt aus dem Repository bauen und `dist` veröffentlichen.
 
 ## Kontaktformular
 

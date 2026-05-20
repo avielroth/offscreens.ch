@@ -1,6 +1,4 @@
-if (import.meta.env?.DEV) {
-  await import("./styles.css");
-}
+import "./styles.css";
 
 const contactForm = document.querySelector("#contactForm");
 const formStatus = document.querySelector("#formStatus");
